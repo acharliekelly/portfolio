@@ -3,9 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@carbon/icons-react": "^11.37.0",
+    "@carbon/themes": "^11.32.0",
+    "carbon-components": "^10.58.12",
+    "carbon-components-react": "^8.52.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "0.9.5"
+    "react-router-dom": "^6.22.2",
+    "react-scripts": "0.9.5",
+    "sass": "^1.71.1",
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {},
   "scripts": {
