@@ -9,3 +9,7 @@ export const StyledContent = styled(Content)`
         margin-left: 0 !important;
     }
 `;
+
+export const BaseLayout = styled.div`
+    border-width: 0;
+`;
