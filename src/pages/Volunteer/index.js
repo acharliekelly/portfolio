@@ -1,2 +1,2 @@
-import Volunteer from './Volunteer'
-export default Volunteer
+import Volunteer from "./Volunteer";
+export default Volunteer;

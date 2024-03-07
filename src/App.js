@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from 'react';
-
-import './App.css';
 import Pages from './pages';
-
-const folioUser = 'acharliekelly';
 
 function App() {
   const [user, setUser] = useState(null);
   useEffect(() => {
-    fetch(`https://gitconnected.com/v1/portfolio/${folioUser}`)
-      .then(res => res.json())
-      .then(user => {
+    // NOTE: Use your username below
+    fetch('https://gitconnected.com/v1/portfolio/acharliekelly')
+      .then((res) => res.json())
+      .then((user) => {
         setUser(user);
       });
   }, []);

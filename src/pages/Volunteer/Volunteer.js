@@ -1,9 +1,9 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { SectionTitle, Paragraph } from '../../styles';
-import { VolunteerItem, VolunteerTitle, JobTitle } from './styles';
+import { VolunteerItem, VolunteerTitle, JobTitle, BulletList } from './styles';
 
-const Volunteer = ({ user}) => {
+const Volunteer = ({ user }) => {
     return (
         <Layout user={user}>
             <div>
@@ -11,15 +11,22 @@ const Volunteer = ({ user}) => {
                 <ul>
                     {user.volunteer.map((volunteer, i) => (
                         <VolunteerItem key={i}>
-                            <VolunteerTitle>{volunteer.position}</VolunteerTitle>
+                            <VolunteerTitle>{volunteer.organization}</VolunteerTitle>
+                            <Paragraph>{volunteer.location}</Paragraph>
+                            <Paragraph>{volunteer.summary}</Paragraph>
                             <div>
-                                <JobTitle>{volunteer.company}</JobTitle> <span>{volunteer.location}</span>
+                                <JobTitle>{volunteer.position}</JobTitle>
                                 <span> &sdot; </span>
                                 <span>
                                     {volunteer.start.year} to {volunteer.end.year}
                                 </span>
                             </div>
-                            <Paragraph>{volunteer.summary}</Paragraph>
+                            
+                            <BulletList>
+                                {volunteer.highlights.map((highlight, j) => (
+                                    <li key={j}><span> &sdot; </span>{highlight}</li>
+                                ))}
+                            </BulletList>
                         </VolunteerItem>
                     ))}
                 </ul>

@@ -15,3 +15,8 @@ export const JobTitle = styled.p`
     font-weight: bold;
     display: inline-block;
 `
+
+export const BulletList = styled.ul`
+    list-style-type: "\1F44D"; 
+    list-style-position: outside;
+`;

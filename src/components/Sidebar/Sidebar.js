@@ -5,34 +5,34 @@ import { SideNavItems, SideNavLink } from 'carbon-components-react/lib/component
 import { StyledSideNav } from './styles';
 
 const items = [
-    { name: 'Me', path: '/' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'Work', path: '/work' },
-    { name: 'Volunteer', path: '/volunteer' },
-    { name: 'Education', path: '/education' },
+  { name: 'Me', path: '/' },
+  { name: 'Projects', path: '/projects' },
+  { name: 'Work', path: '/work' },
+  { name: 'Volunteer', path: '/volunteer' },
+  { name: 'Education', path: '/education' },
 ];
 
 const Sidebar = () => {
-    const location = useLocation();
+  const location = useLocation();
 
-    return (
-        <StyledSideNav isFixedNav expanded isChildOfHeader={false} aria-label='Side navigation'>
-            <SideNavItems>
-                {items.map(i => (
-                    <SideNavLink 
-                        isActive={
-                            location.pathname === '/' && i.path === '/' ? true : location.pathname === i.path
-                        }
-                        element={Link}
-                        to={i.path}
-                        key={i.name}
-                    >
-                        {i.name}
-                    </SideNavLink>
-                ))}
-            </SideNavItems>
-        </StyledSideNav>
-    );
+  return (
+    <StyledSideNav isFixedNav expanded isChildOfHeader={false} aria-label="Side navigation">
+      <SideNavItems>
+        {items.map(i => (
+          <SideNavLink
+            isActive={
+              location.pathname === '/' && i.path === '/' ? true : location.pathname === i.path
+            }
+            element={Link}
+            to={i.path}
+            key={i.name}
+          >
+            {i.name}
+          </SideNavLink>
+        ))}
+      </SideNavItems>
+    </StyledSideNav>
+  );
 };
 
 export default Sidebar;
