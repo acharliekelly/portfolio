@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import { SectionTitle, Paragraph } from '../../styles';
-import { VolunteerItem, VolunteerTitle, JobTitle, BulletList } from './styles';
+import { SectionTitle, Paragraph, Detail } from '../../styles';
+import { VolunteerItem, VolunteerTitle, JobTitle } from './styles';
 
 const Volunteer = ({ user }) => {
     return (
@@ -22,11 +22,14 @@ const Volunteer = ({ user }) => {
                                 </span>
                             </div>
                             
-                            <BulletList>
-                                {volunteer.highlights.map((highlight, j) => (
-                                    <li key={j}><span> &sdot; </span>{highlight}</li>
-                                ))}
-                            </BulletList>
+                            <ul>
+                            {volunteer.highlights.map((highlight, j) => (
+                                <Detail key={j}>
+                                    <span> &bull; </span>
+                                    {highlight}
+                                </Detail>
+                            ))}
+                            </ul>
                         </VolunteerItem>
                     ))}
                 </ul>

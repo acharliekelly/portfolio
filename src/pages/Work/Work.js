@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import { SectionTitle, Paragraph } from '../../styles';
+import { SectionTitle, Paragraph, Detail } from '../../styles';
 import { WorkItem, WorkTitle, JobTitle } from './styles';
 
 const Work = ({ user }) => {
@@ -22,10 +22,10 @@ const Work = ({ user }) => {
               <Paragraph>{work.summary}</Paragraph>
               <ul>
                 {work.highlights.map((highlight, j) => (
-                  <li key={j}>
-                    <span> &sdot; </span>
+                  <Detail key={j}>
+                    <span> &bull; </span>
                     {highlight}
-                  </li>
+                  </Detail>
                 ))}
               </ul>
             </WorkItem>

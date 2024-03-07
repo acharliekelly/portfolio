@@ -20,3 +20,8 @@ export const Pill = styled.span`
   border-radius: 2px;
   font-weight: bold;
 `;
+
+export const Detail = styled.li`
+  line-height: 1rem;
+  padding: 0.2rem;
+`;
