@@ -1,3 +1,4 @@
+// pages/Projects styles
 import styled from 'styled-components'
 import { white, cyan, purple } from '@carbon/colors'
 

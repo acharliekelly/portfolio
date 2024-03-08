@@ -25,3 +25,7 @@ export const Detail = styled.li`
   line-height: 1rem;
   padding: 0.2rem;
 `;
+
+export const Matrix = styled.div`
+
+`;

@@ -1,3 +1,4 @@
+// pages/Me styles
 import styled from 'styled-components'
 
 export const ProfileLink = styled.li`

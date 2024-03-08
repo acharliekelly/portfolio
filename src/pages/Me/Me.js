@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 // import Skill from '../../components/Skill';
 // import { skillColors } from '../../utils/lookup';
+// import Skillset from '../../components/Skillset';
 import { SectionTitle, Paragraph, Pill } from '../../styles';
 import { ProfileLink } from './styles';
 
@@ -14,6 +15,7 @@ const Me = ({ user }) => {
       </div>
       <div>
         <SectionTitle>Skills</SectionTitle>
+        {/* <Skillset user={user} skillType="Frontend" /> */}
         <div>
           {user.skills.map(skill => (
             // <Skill key={skill.name} skill={skill} />

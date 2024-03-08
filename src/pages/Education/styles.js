@@ -1,3 +1,4 @@
+// pages/Education styles
 import styled from 'styled-components'
 import { white } from '@carbon/colors'
 
