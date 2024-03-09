@@ -1,0 +1,52 @@
+/* components/Skillset CSS Module */
+
+.SkillContainer {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 0.2rem;
+  
+}
+
+.ContainerTitle {
+  font-style: italic;
+  margin-right: 1rem;
+
+}
+
+.Matrix {
+  margin-top: 1rem;
+}
+
+.Matrix li {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 0 1rem;
+  cursor: default;
+}
+
+.Novice {
+  background-color: yellow;
+  color: black;
+}
+
+.Beginner {
+  background-color: yellowgreen;
+  color: black;
+}
+
+.Intermediate {
+  background-color: green;
+  color: white;
+}
+
+.Advanced {
+  background-color: teal;
+  color: white;
+}
+
+.Expert {
+  background-color: blueviolet;
+  color: white;
+}

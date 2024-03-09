@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { SkillMatrix } from './styles';
-import { Tag } from 'carbon-components-react';
-// import Skill from '../Skill';
+import style from './Skillset.module.css';
+
 
 const Skillset = ({ user, minRating, minExp, skillType }) => {
   let skills = user.skills;
@@ -15,13 +14,18 @@ const Skillset = ({ user, minRating, minExp, skillType }) => {
     skills = user.skills.filter((sk) => sk.yearsOfExperience >= minExp);
   }
   return (
-    <SkillMatrix>
-      {skills.map((skill) => (
-        <Tag>
-          {skill.name} | {skill.rating}
-        </Tag>
-      ))}
-    </SkillMatrix>
+    <div className={style.SkillContainer}>
+      <span className={style.ContainerTitle}>{skillType}</span>
+      <ul className={style.Matrix}>
+        {skills.map((skill) => (
+          <li 
+            className={style[skill.level]} 
+            title={`${skill.level}: ${skill.yearsOfExperience} yrs`}>
+            {skill.name}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
