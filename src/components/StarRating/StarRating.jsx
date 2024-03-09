@@ -1,6 +1,7 @@
 import React from 'react';
 import { StarFilled16 } from '@carbon/icons-react';
-import { SkillRating } from '../Skill/styles';
+// import { SkillRating } from '../Skill/styles';
+import style from './StarRating.module.css';
 
 
 const StarRating = ({ rating } ) => {
@@ -11,7 +12,7 @@ const StarRating = ({ rating } ) => {
     }
 
     return (
-        <SkillRating>{stars}</SkillRating>
+        <span className={style.SkillRating}>{stars}</span>
     )
 };
 

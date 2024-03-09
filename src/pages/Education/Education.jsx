@@ -1,7 +1,8 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { SectionTitle, Paragraph } from '../../styles';
-import { EducationItem, Institution, Degree } from './styles';
+// import { EducationItem, Institution, Degree } from './styles';
+import style from './Education.module.css';
 
 const Education = ({ user }) => {
   return (
@@ -10,19 +11,19 @@ const Education = ({ user }) => {
         <SectionTitle>Education</SectionTitle>
         <ul>
           {user.education.map((education, i) => (
-            <EducationItem key={i}>
-              <Institution>{education.position}</Institution>
+            <li className={style.EducationItem} key={i}>
+              <h4 className={style.Institution}>{education.position}</h4>
               <div>
-                <Degree>
+                <p className={style.Degree}>
                   {education.studyType}, {education.area}
-                </Degree>{' '}
+                </p>{' '}
                 <span> &sdot; </span>
                 <span>
                   {education.start.year} to {education.end.year}
                 </span>
               </div>
               <Paragraph>{education.description.replace('\n\n', '\n')}</Paragraph>
-            </EducationItem>
+            </li>
           ))}
         </ul>
       </div>

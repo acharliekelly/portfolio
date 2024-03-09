@@ -1,16 +1,15 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 import { ArrowRight16 } from '@carbon/icons-react';
 
-import { HeaderContainer, Header, Image, ViewResumeLink } from './styles';
+// import { HeaderContainer, Header, Image, ViewResumeLink } from './styles';
+import style from './UserHeader.module.css';
 
 const UserHeader = ({ user }) => {
-  const location = useLocation();
 
   return (
-    <HeaderContainer isHome={location.pathname === '/'}>
-      <Header>
-        <Image src={user.basics.picture} />
+    <div className={style.HeaderContainer}>
+      <div className={style.Header}>
+        <img className={style.AvatarImage} src={user.basics.picture} alt="Avatar" />
         <div>
           <h2>{user.basics.name}</h2>
           <h4>
@@ -27,18 +26,18 @@ const UserHeader = ({ user }) => {
           <p>{user.basics.yearsOfExperience} years of experience as a developer</p>
           <p>{user.basics.headline}</p>
         </div>
-      </Header>
+      </div>
       <div>
-        <ViewResumeLink
+        <a className={style.ViewResumeLink}
           href={`https://gitconnected.com/${user.basics.username}/resume`}
           target="_blank"
           rel="noopener noreferrer"
         >
           <span>View Résumé</span>
           <ArrowRight16 />
-        </ViewResumeLink>
+        </a>
       </div>
-    </HeaderContainer>
+    </div>
   );
 };
 
