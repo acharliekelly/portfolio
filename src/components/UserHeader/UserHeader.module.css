@@ -1,0 +1,45 @@
+/* components/UserHeader CSS Module */
+
+.HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 640px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.Header {
+  display: flex;
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
+}
+
+.AvatarImage {
+  width: 200px;
+  margin-right: 1rem;
+  border-radius: 2px;
+}
+
+.ViewResumeLink {
+  display: flex;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  align-items: center;
+  margin-top: 1rem;
+  border: 2px solid #2ecc40;
+  background-color: rgba(46, 204, 64, 0.3);
+  transition: background-color 250ms ease;
+}
+
+.ViewResumeLink:hover {
+  background-color: #2ecc40;
+}
+
+.ViewResumeLink svg {
+  fill: white;
+  margin-left: 8px;
+}

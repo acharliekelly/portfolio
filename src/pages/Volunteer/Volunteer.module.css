@@ -1,0 +1,21 @@
+/* pages/Volunteer CSS Module */
+
+.VolunteerItem {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
+}
+
+.VolunteerTitle {
+  font-weight: bold;
+}
+
+.JobTitle {
+  font-weight: bold;
+  display: inline-block;
+}
+
+.BulletList {
+  list-style-type: "\1F44D";
+  list-style-position: outside;
+}

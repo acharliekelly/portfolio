@@ -1,0 +1,31 @@
+/* components/MobileNav CSS */
+.Container {
+  display: none;
+
+  @media (max-width: 640px) {
+    display: block;
+  }
+}
+
+.Spacer {
+  height: 48px;
+}
+
+.NavWrapper {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.NavLink {
+  width: 25%;
+}
+
+.NavButton {
+  width: 100%;
+  justify-content: center;
+}

@@ -1,7 +1,8 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { SectionTitle, Pill } from '../../styles';
-import { ProjectItem, ProjectTitle, SkillContainer, SiteLink, RepoLink } from './styles';
+// import { ProjectItem, ProjectTitle, SkillContainer, SiteLink, RepoLink } from './styles';
+import style from './Projects.module.css';
 
 const Projects = ({ user }) => {
   return (
@@ -10,28 +11,32 @@ const Projects = ({ user }) => {
         <SectionTitle>Projects</SectionTitle>
         <ul>
           {user.projects.map((project, i) => (
-            <ProjectItem key={i}>
-              <ProjectTitle>{project.name}</ProjectTitle>
+            <li className={style.ProjectItem} key={i}>
+              <h4 className={style.ProjectTitle}>{project.name}</h4>
               <p>{project.summary}</p>
               <br/>
-              <p>
+              <p className={style.Links}>
                 {project.website && (
-                  <SiteLink href={project.website} target="_blank" rel="noopener noreferrer">Site</SiteLink>
+                  <span className={style.Site}>
+                    <a className={style.Link} href={project.website} target="_blank" rel="noopener noreferrer">Site</a>
+                  </span>
                 )}
                 {' '}
                 {project.githubUrl && (
-                  <RepoLink href={project.githubUrl} target="_blank" rel="noopener noreferrer">Repo</RepoLink>
+                  <span className={style.Repo}>
+                    <a className={style.Link} href={project.githubUrl} target="_blank" rel="noopener noreferrer">Repo</a>
+                  </span>
                 )}
               </p>
-              <SkillContainer>
+              <div className={style.SkillContainer}>
                 {[...project.languages, ...project.libraries].map((item, j) => (
                   <Pill key={j}>{item}</Pill>
                 ))}
-              </SkillContainer>
+              </div>
               {project.images.map((image, k) => (
                 <img key={k} alt={'Image '+k} src={image.resolutions.thumbnail.url} />
               ))}
-            </ProjectItem>
+            </li>
           ))}
         </ul>
       </div>

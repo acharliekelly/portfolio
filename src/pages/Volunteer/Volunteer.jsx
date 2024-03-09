@@ -1,7 +1,8 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { SectionTitle, Paragraph, Detail } from '../../styles';
-import { VolunteerItem, VolunteerTitle, JobTitle } from './styles';
+// import { VolunteerItem, VolunteerTitle, JobTitle } from './styles';
+import style from './Volunteer.module.css';
 
 const Volunteer = ({ user }) => {
     return (
@@ -10,12 +11,12 @@ const Volunteer = ({ user }) => {
                 <SectionTitle>Volunteer</SectionTitle>
                 <ul>
                     {user.volunteer.map((volunteer, i) => (
-                        <VolunteerItem key={i}>
-                            <VolunteerTitle>{volunteer.organization}</VolunteerTitle>
+                        <li className={style.VolunteerItem} key={i}>
+                            <h4 className={style.VolunteerTitle}>{volunteer.organization}</h4>
                             <Paragraph>{volunteer.location}</Paragraph>
                             <Paragraph>{volunteer.summary}</Paragraph>
                             <div>
-                                <JobTitle>{volunteer.position}</JobTitle>
+                                <p className={style.JobTitle}>{volunteer.position}</p>
                                 <span> &sdot; </span>
                                 <span>
                                     {volunteer.start.year} to {volunteer.end.year}
@@ -30,7 +31,7 @@ const Volunteer = ({ user }) => {
                                 </Detail>
                             ))}
                             </ul>
-                        </VolunteerItem>
+                        </li>
                     ))}
                 </ul>
             </div>

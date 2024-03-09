@@ -4,7 +4,8 @@ import Layout from '../../components/Layout';
 // import { skillColors } from '../../utils/lookup';
 // import Skillset from '../../components/Skillset';
 import { SectionTitle, Paragraph, Pill } from '../../styles';
-import { ProfileLink } from './styles';
+// import { ProfileLink } from './styles';
+import Profile from '../../components/Profile';
 
 const Me = ({ user }) => {
   return (
@@ -22,8 +23,6 @@ const Me = ({ user }) => {
 
             <Pill key={skill.name}>
               <strong>{skill.name}</strong>
-              <span> | </span>
-              <em>{skill.yearsOfExperience} yrs</em>
             </Pill>
           ))}
         </div>
@@ -31,13 +30,8 @@ const Me = ({ user }) => {
       <div>
         <SectionTitle>Profiles</SectionTitle>
         <ul>
-          {user.basics.profiles.map((profile, i) => (
-            <ProfileLink key={profile.network}>
-              {i !== 0 && ' | '}
-              <a href={profile.url} target="_blank" rel="noreferrer noopener">
-                {profile.network}
-              </a>
-            </ProfileLink>
+          {user.basics.profiles.map(profile => (
+            <Profile key={profile.network} profile={profile} />
           ))}
         </ul>
       </div>

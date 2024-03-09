@@ -1,0 +1,16 @@
+/* pages/Work CSS Module */
+
+.WorkItem {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
+}
+
+.WorkTitle {
+  font-weight: bold;
+}
+
+.JobTitle {
+  font-weight: bold;
+  display: inline-block;
+}
