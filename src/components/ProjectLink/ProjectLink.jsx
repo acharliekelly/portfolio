@@ -45,8 +45,10 @@ const RepoLink = ({ project }) => (
 );
 
 const DisabledLink = ({ text }) => (
-  <span className={style.Link}>
-    <InformationDisabled20 /> {text}
+  <span className={style.Disabled}>
+      <span className={style.Link}>
+        <InformationDisabled20 /> {text}
+      </span>
   </span>
 );
 

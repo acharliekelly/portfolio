@@ -11,7 +11,10 @@
   border-style: solid;
   border-radius: 5px;
   transition: background-color 250ms ease;
+  cursor: pointer;
 }
+
+
 
 .Link svg {
   fill: white;
@@ -33,4 +36,13 @@
 }
 .Site .Link:hover {
   background-color: rgb(13, 146, 204);
+}
+
+.Disabled .Link, .Site .Disabled .Link, .Repo .Disabled .Link {
+  cursor: not-allowed;
+  background-color: rgba(251, 10, 10, 0.3);
+  border-color: rgb(251, 10, 10);
+}
+.Disabled .Link:hover, .Site .Disabled .Link:hover, .Repo .Disabled .Link:hover {
+  background-color: rgb(251, 10, 10);
 }
