@@ -1,10 +1,7 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-// import Skill from '../../components/Skill';
-// import { skillColors } from '../../utils/lookup';
 import Skillset from '../../components/Skillset';
 import { SectionTitle, Paragraph } from '../../styles';
-// import { ProfileLink } from './styles';
 import Profile from '../../components/Profile';
 
 const Me = ({ user }) => {

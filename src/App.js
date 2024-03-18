@@ -13,7 +13,11 @@ function App() {
   }, []);
 
   if (!user) {
-    return <div />;
+    return (
+      <div>
+        <h1>Missing portfolio user!</h1>
+      </div>
+    )
   }
 
   return <Pages user={user} />;

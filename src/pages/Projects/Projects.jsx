@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import ProjectLink from '../../components/ProjectLink/ProjectLink';
 import { SectionTitle, Pill } from '../../styles';
-// import { ProjectItem, ProjectTitle, SkillContainer, SiteLink, RepoLink } from './styles';
 import style from './Projects.module.css';
 
 const Projects = ({ user }) => {
@@ -12,30 +12,30 @@ const Projects = ({ user }) => {
         <ul>
           {user.projects.map((project, i) => (
             <li className={style.ProjectItem} key={i}>
-              <h4 className={style.ProjectTitle}>{project.name}</h4>
+              <h4 className={style.ProjectTitle}>{project.displayName}</h4>
               <p>{project.summary}</p>
               <br/>
-              <p className={style.Links}>
-                {project.website && (
-                  <span className={style.Site}>
-                    <a className={style.Link} href={project.website} target="_blank" rel="noopener noreferrer">Site</a>
-                  </span>
-                )}
-                {' '}
-                {project.githubUrl && (
-                  <span className={style.Repo}>
-                    <a className={style.Link} href={project.githubUrl} target="_blank" rel="noopener noreferrer">Repo</a>
-                  </span>
-                )}
-              </p>
-              <div className={style.SkillContainer}>
-                {[...project.languages, ...project.libraries].map((item, j) => (
-                  <Pill key={j}>{item}</Pill>
-                ))}
-              </div>
               {project.images.map((image, k) => (
                 <img key={k} alt={'Image '+k} src={image.resolutions.thumbnail.url} />
               ))}
+              <p className={style.Links}>
+                <ProjectLink project={project} linkType='web' />
+                <ProjectLink project={project} linkType='repo' />
+              </p>
+              <div className={style.SkillContainer}>
+                <p><em>Languages</em></p>
+                <br/>
+                {project.languages.map((item, j) => (
+                  <Pill key={j}>{item}</Pill>
+                ))}
+                <p><em>Libraries</em></p>
+                <br/>
+                {project.libraries.map((item, m) => (
+                  <Pill key={m}>{item}</Pill>
+                ))}
+              </div>
+              
+              
             </li>
           ))}
         </ul>

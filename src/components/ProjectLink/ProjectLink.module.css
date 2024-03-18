@@ -1,0 +1,36 @@
+
+
+
+.Link {
+  text-decoration: none;
+  padding: 0.5rem;
+  font-weight: bold;
+  align-items: center;
+  margin-top: 2rem;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  transition: background-color 250ms ease;
+}
+
+.Link svg {
+  fill: white;
+  margin-right: 8px;
+  margin-top: 5px;
+}
+
+.Repo .Link {
+  background-color: rgba(204, 46, 164, 0.3);
+  border-color: purple;
+}
+.Repo .Link:hover {
+  background-color: purple;
+}
+
+.Site .Link {
+  background-color: rgba(13, 146, 204, 0.3);
+  border-color: rgb(13, 146, 204);
+}
+.Site .Link:hover {
+  background-color: rgb(13, 146, 204);
+}
