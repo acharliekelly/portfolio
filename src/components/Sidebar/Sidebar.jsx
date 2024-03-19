@@ -9,12 +9,12 @@ const Sidebar = () => {
   return (
     <nav className={style.SideNav} aria-label="Side navigation">
       <ul>
-        {navigationItems.map((item, i) => (
+        {navigationItems.map(i => (
             <Link
               isActive={
                 location.pathname === '/' && i.path === '/' ? true : location.pathname === i.path
               }
-              element={Link}
+              element='li'
               to={i.path}
               key={i.name}
             >

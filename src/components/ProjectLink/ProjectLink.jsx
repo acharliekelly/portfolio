@@ -1,5 +1,6 @@
 import React from 'react';
-import { Launch20, RepoSourceCode20, InformationDisabled20 } from '@carbon/icons-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquareArrowUpRight, faBan, faFileCode } from '@fortawesome/free-solid-svg-icons';
 import style from './ProjectLink.module.css';
 
 const ProjectLink = ({ project, linkType }) => {
@@ -19,7 +20,7 @@ const SiteLink = ({ project }) => (
         target='_blank'
         rel='noopener noreferrer'
         >
-        <Launch20 /> Site
+        <faSquareArrowUpRight /> Site
         </a>
     ) : (
       <DisabledLink text="Pre Launch" />
@@ -36,7 +37,7 @@ const RepoLink = ({ project }) => (
         target='_blank'
         rel='noopener noreferrer'
       >
-        <RepoSourceCode20 /> Repo
+        <faFileCode /> Repo
       </a>
     ) : (
       <DisabledLink text="Private" />
@@ -47,7 +48,7 @@ const RepoLink = ({ project }) => (
 const DisabledLink = ({ text }) => (
   <span className={style.Disabled}>
       <span className={style.Link}>
-        <InformationDisabled20 /> {text}
+        <faBan /> {text}
       </span>
   </span>
 );

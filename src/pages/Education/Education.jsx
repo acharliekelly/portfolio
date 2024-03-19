@@ -1,13 +1,13 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import { SectionTitle, Paragraph } from '../../styles';
 import style from './Education.module.css';
+import pages from '../Pages.module.css';
 
 const Education = ({ user }) => {
   return (
     <Layout user={user}>
       <div>
-        <SectionTitle>Education</SectionTitle>
+        <h4 className={pages.SectionTitle}>Education</h4>
         <ul>
           {user.education.map((education, i) => (
             <li className={style.EducationItem} key={i}>
@@ -21,7 +21,7 @@ const Education = ({ user }) => {
                   {education.start.year} to {education.end.year}
                 </span>
               </div>
-              <Paragraph>{education.description.replace('\n\n', '\n')}</Paragraph>
+              <p className={pages.Paragraph}>{education.description.replace('\n\n', '\n')}</p>
             </li>
           ))}
         </ul>

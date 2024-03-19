@@ -1,5 +1,6 @@
 import React from 'react';
-import { UserAvatar32 } from '@carbon/icons-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faIdCard } from '@fortawesome/free-solid-svg-icons';
 import style from './Profile.module.css';
 
 const Profile = ({ profile, iconSvg }) => {
@@ -13,7 +14,7 @@ const Profile = ({ profile, iconSvg }) => {
       title={username}
       >
         {iconSvg || (
-        <UserAvatar32 />
+        <FontAwesomeIcon icon={faIdCard} />
       )}
         {network}</a> 
   );
