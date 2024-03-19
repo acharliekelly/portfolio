@@ -1,14 +1,14 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import ProjectLink from '../../components/ProjectLink/ProjectLink';
-import { SectionTitle, Pill } from '../../styles';
 import style from './Projects.module.css';
+import pages from '../Pages.module.css';
 
 const Projects = ({ user }) => {
   return (
     <Layout user={user}>
       <div>
-        <SectionTitle>Projects</SectionTitle>
+        <h3 className={pages.SectionTitle}>Projects</h3>
         <ul>
           {user.projects.map((project, i) => (
             <li className={style.ProjectItem} key={i}>
@@ -26,12 +26,12 @@ const Projects = ({ user }) => {
                 <p><em>Languages</em></p>
                 <br/>
                 {project.languages.map((item, j) => (
-                  <Pill key={j}>{item}</Pill>
+                  <span className={pages.Pill} key={j}>{item}</span>
                 ))}
                 <p><em>Libraries</em></p>
                 <br/>
                 {project.libraries.map((item, m) => (
-                  <Pill key={m}>{item}</Pill>
+                  <span className={pages.Pill} key={m}>{item}</span>
                 ))}
               </div>
               

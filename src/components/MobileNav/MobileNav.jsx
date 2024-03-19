@@ -1,6 +1,5 @@
 import React from 'react'
-import { FaceCool32, Portfolio32, HealthCross32, Education32, Collaborate32 } from '@carbon/icons-react'
-
+import { faBriefcase, faIdCard, faHandsHelping, faGraduationCap, faHandshake } from '@fortawesome/free-solid-svg-icons';
 import { Container, Spacer, NavWrapper, NavButton, NavLink } from './styles'
 
 const MobileNav = () => {
@@ -11,7 +10,7 @@ const MobileNav = () => {
         <NavLink to="/">
           <NavButton
             hasIconOnly
-            renderIcon={FaceCool32}
+            renderIcon={faIdCard}
             iconDescription="Me"
             tooltipPosition="bottom"
           />
@@ -19,7 +18,7 @@ const MobileNav = () => {
         <NavLink to="/projects">
           <NavButton
             hasIconOnly
-            renderIcon={Collaborate32}
+            renderIcon={faHandshake}
             iconDescription="Projects"
             tooltipPosition="bottom"
           />
@@ -27,7 +26,7 @@ const MobileNav = () => {
         <NavLink to="/work">
           <NavButton
             hasIconOnly
-            renderIcon={Portfolio32}
+            renderIcon={faBriefcase}
             iconDescription="Work"
             tooltipPosition="bottom"
           />
@@ -35,7 +34,7 @@ const MobileNav = () => {
         <NavLink to="/volunteer">
           <NavButton 
             hasIconOnly
-            renderIcon={HealthCross32}
+            renderIcon={faHandsHelping}
             iconDescription="Volunteer"
             tooltipPosition="bottom"
           />
@@ -43,7 +42,7 @@ const MobileNav = () => {
         <NavLink to="/education">
           <NavButton
             hasIconOnly
-            renderIcon={Education32}
+            renderIcon={faGraduationCap}
             iconDescription="Education"
             tooltipPosition="bottom"
           />

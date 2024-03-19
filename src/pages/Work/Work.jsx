@@ -1,14 +1,14 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import { SectionTitle, Paragraph, Detail } from '../../styles';
-// import { WorkItem, WorkTitle, JobTitle } from './styles';
+
 import style from './Work.module.css';
+import pages from '../Pages.module.css';
 
 const Work = ({ user }) => {
   return (
     <Layout user={user}>
       <div>
-        <SectionTitle>Work</SectionTitle>
+        <h4 className={pages.SectionTitle}>Work</h4>
         <ul>
           {user.work.map((work, i) => (
             <li className={style.WorkItem} key={i}>
@@ -20,13 +20,13 @@ const Work = ({ user }) => {
                   {work.start.year} to {work.end.year}
                 </span>
               </div>
-              <Paragraph>{work.summary}</Paragraph>
+              <p className={pages.Paragraph}>{work.summary}</p>
               <ul>
                 {work.highlights.map((highlight, j) => (
-                  <Detail key={j}>
+                  <li className={pages.Detail} key={j}>
                     <span> &bull; </span>
                     {highlight}
-                  </Detail>
+                  </li>
                 ))}
               </ul>
             </li>

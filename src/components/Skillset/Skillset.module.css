@@ -13,7 +13,14 @@
   margin-right: 1rem;
 
 }
+.ContainerFilter {
+  display: block;
+}
+.ContainerFilterTitle {
+  font-style: italic;
+  margin-right: 1rem;
 
+}
 .Matrix {
   margin-top: 1rem;
 }

@@ -1,0 +1,41 @@
+/* Pages CSS Module */
+
+.ProjectItem {
+  /* li */
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
+}
+
+.ProjectTitle {
+  /* h4 */
+  font-weight: bold;
+}
+
+.SectionTitle {
+  /* h3 */
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.Paragraph {
+  /* p */
+  white-space: pre-wrap;
+}
+
+.Pill {
+  /* span */
+  display: inline-block;
+  margin-right: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  font-weight: bold;
+  /* colors removed */
+}
+
+.Detail {
+  /* li */
+  line-height: 1rem;
+  padding: 0.2rem;
+}

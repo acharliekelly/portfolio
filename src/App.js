@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Pages from './pages';
 import { portfolioUserName } from './config';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -14,8 +16,8 @@ function App() {
 
   if (!user) {
     return (
-      <div>
-        <h1>Missing portfolio user!</h1>
+      <div className='loading'>
+        <FontAwesomeIcon icon={faSpinner} />
       </div>
     )
   }

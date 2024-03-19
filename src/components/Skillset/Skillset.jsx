@@ -15,7 +15,7 @@ const Skillset = ({ user, minRating, minExp, skillType }) => {
   }
   return (
     <div className={style.SkillContainer}>
-      <span className={style.ContainerTitle}>{skillType}</span>
+      return <span className={style.ContainerTitle}>{skillType}</span>
       <ul className={style.Matrix}>
         {skills.map((skill) => (
           <li 
@@ -28,5 +28,23 @@ const Skillset = ({ user, minRating, minExp, skillType }) => {
     </div>
   );
 };
+
+// const SkillSetTypeControl = ({ minExp=1, minRating=2, skillType }) => {
+//   if (minExp) {
+//     return (
+//       <span className={style.ContainerFilter}>
+//         <span className={style.ContainerFilterTitle}>by Experience</span>
+//       </span>
+//     );
+//   } else if (minRating) {
+//     return (
+//       <span className={style.ContainerFilter}>
+//         <span className={style.ContainerFilterTitle}>by Rating</span>
+//       </span>
+//     );
+//   } else {
+//     return <span className={style.ContainerTitle}>{skillType}</span>
+//   }
+// };
 
 export default Skillset;

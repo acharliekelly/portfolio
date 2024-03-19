@@ -1,7 +1,5 @@
 import React from 'react';
-import { ArrowRight16 } from '@carbon/icons-react';
-
-// import { HeaderContainer, Header, Image, ViewResumeLink } from './styles';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import style from './UserHeader.module.css';
 
 const UserHeader = ({ user }) => {
@@ -34,7 +32,7 @@ const UserHeader = ({ user }) => {
           rel="noopener noreferrer"
         >
           <span>View Résumé</span>
-          <ArrowRight16 />
+          <faArrowRight />
         </a>
       </div>
     </div>
